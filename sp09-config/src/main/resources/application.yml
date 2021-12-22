@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Yx-hub/springcloud1
+          uri: https://github.com/Yx-hub/Yt
           searchPaths: config
           #username: your-username
           #password: your-password
@@ -25,10 +25,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
-
-
 management:
-  endpoint:
+  endpoints:
     web:
       exposure:
-        include: bus-refresh
+        include: bus-refresh, env
