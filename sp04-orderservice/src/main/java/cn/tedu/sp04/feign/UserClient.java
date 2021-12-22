@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface UserClient {
 
     @GetMapping("/{userId}")
-    public JsonResult<User> getUser(@PathVariable Integer userId);
+    public JsonResult<User> getUser(@PathVariable(name = "userId") Integer userId);
 
 
 
     @GetMapping("/{userId}/score")
-    public JsonResult<?> addScore(@PathVariable  Integer userId, @RequestParam("score") Integer score);
+    public JsonResult<?> addScore(@PathVariable(name = "userId")  Integer userId, @RequestParam("score") Integer score);
 }
