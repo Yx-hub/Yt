@@ -1,6 +1,10 @@
 spring:
   application:
     name: zull-service
+  zipkin:
+    sender:
+      type: rabbit
+
 
 server:
   port: 3001

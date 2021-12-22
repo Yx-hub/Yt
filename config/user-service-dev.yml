@@ -1,6 +1,9 @@
 spring:
   application:
     name: user-service
+  zipkin:
+    sender:
+      type: rabbit
   cloud:
     config:
       override-none: true
